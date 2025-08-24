@@ -15,6 +15,8 @@ namespace Quad64.src.Forms
         private void lt_gls_radioPanel_Resize(object sender, EventArgs e)
         {
             int control_count = lt_gls_radioPanel.Controls.Count;
+            if (control_count == 0)
+                return; // nothing to layout
             int rb_width = lt_gls_radioPanel.Width / control_count;
             for (int i = 0; i < control_count; i++)
             {
